@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'cadastro_enquete_list' %}">Lista de Enquetes</a></p>
+<table class="table">
+<tr><td>Titulo/Tema</td><td>{{ object.titulo }}</td></tr>
+<tr><td>Peergunta</td><td>{{ object.pergunta }}</td></tr>
+<tr><td>Data_cria&ccedil;&atildeo</td><td>{{ object.data_criacao }}</td></tr>
+<tr><td>Data_publica&ccedil;&atilde;o</td><td>{{ object.data_publicacao }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Atualizar Enquete</a>
+
+{% endblock %}

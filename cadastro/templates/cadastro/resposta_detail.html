@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'cadastro_resposta_list' %}">Lista de Respostas</a></p>
+<table class="table">
+<tr><td>Resposta</td><td>{{ object.resposta }}</td></tr>
+<tr><td>Data_reposta</td><td>{{ object.data_reposta }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Editar Resposta</a>
+
+{% endblock %}
